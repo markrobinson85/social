@@ -98,7 +98,7 @@ odoo.define('mail_tracking.partner_tracking', function(require){
                 msg_ids.push(message.id);
             });
             // Only render the tracking when message is not chat.
-            if (messages[0].model != "mail.channel") {
+            if (messages.length > 0 && messages[0].model != "mail.channel") {
                 MessageModel.call('tracking_status', [msg_ids]).then(function (trackings) {
                     _.each(trackings, function (tracking, id) {
                         msgs[id].partner_trackings = tracking;
