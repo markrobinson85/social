@@ -43,7 +43,9 @@
 <t t-extend="mail.ChatThread.Message">
     <t t-jquery="p[class='o_mail_info']" t-operation="after">
         <p class="o_mail_tracking">
-            <strong>To:</strong>
+            <t t-if="message.partner_ids.length > 0">
+                <strong>To:</strong>
+            </t>
             <t t-set="first_tracking" t-value="true"/>
             <t t-foreach="message.partner_trackings" t-as="tracking">
                 <t t-if="!first_tracking">

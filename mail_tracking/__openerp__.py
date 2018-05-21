@@ -16,6 +16,7 @@
     "depends": [
         "decimal_precision",
         "mail",
+        # "mail_base",
     ],
     "data": [
         "data/tracking_data.xml",
