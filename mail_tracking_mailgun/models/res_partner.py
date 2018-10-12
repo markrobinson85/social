@@ -30,8 +30,7 @@ class ResPartner(models.Model):
             body = _('Email has been bounced: %s\n'
                      'Reason: %s\n'
                      'Event: %s') % (partner.email, reason,
-                                     event and event.get('Message-Id',
-                                                         _('unknown')))
+                                     event and event.id or _('unknown'))
             partner.message_post(body=body)
 
     @api.multi
@@ -48,7 +47,8 @@ class ResPartner(models.Model):
                               ' in order to be able to check mails validity'))
         for partner in self:
             res = requests.get(
-                "%s/address/validate" % api_url,
+                # Validation API url is allways the same
+                'https://api.mailgun.net/v3/address/validate',
                 auth=("api", validation_key), params={
                     "address": partner.email,
                     "mailbox_verification": True,

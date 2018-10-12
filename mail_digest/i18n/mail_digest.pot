@@ -6,8 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-23 07:08+0000\n"
-"PO-Revision-Date: 2017-05-23 07:08+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -33,7 +31,7 @@ msgid "Daily"
 msgstr ""
 
 #. module: mail_digest
-#: code:addons/mail_digest/models/mail_digest.py:106
+#: code:addons/mail_digest/models/mail_digest.py:117
 #, python-format
 msgid "Daily update"
 msgstr ""
@@ -164,7 +162,7 @@ msgid "Weekly"
 msgstr ""
 
 #. module: mail_digest
-#: code:addons/mail_digest/models/mail_digest.py:108
+#: code:addons/mail_digest/models/mail_digest.py:119
 #, python-format
 msgid "Weekly update"
 msgstr ""
@@ -173,3 +171,4 @@ msgstr ""
 #: sql_constraint:partner.notification.conf:0
 msgid "You can have only one configuration per subtype!"
 msgstr ""
+
